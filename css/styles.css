@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    /* Primary Color */
+    --pale-blue: hsl(225, 100%, 94%);
+    --brigth-blue: hsl(245, 75%, 52%);
+
+    /* Neutral Color */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    /* Typography */
+    --fs-16: 16px;
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Red Hat Display';
+    font-size: var(--fs-16);
+}
+
+.container {
+    height: 100vh;
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: var(--pale-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 85vw;
+    max-width: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 20px 50px -7px rgb(183, 191, 241);
+    padding-bottom: 2rem;
+}
+
+
+.card__img {
+    width: 100%;
+    height: auto;
+}
+
+.card__title {
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    color: var(--dark-blue);
+    font-weight: var(--fw-900);
+}
+
+.card__description {
+    color: var(--desaturated-blue);
+    text-align: center;
+    margin: 0 2rem;
+    line-height: 1.6rem;
+    font-size: 1rem;
+}
+
+.card__plan {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 12px;
+    margin: 1.5rem 2rem 2rem 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.card__details {
+    padding: 1rem;
+}
+
+.card-details strong {
+    font-weight: 900;
+    font-size: 0.9rem;
+    color: var(--dark-blue);
+}
+
+.card-details p {
+    line-height: 1.7rem;
+    font-size: 0.9rem;
+    color: var(--desaturated-blue);
+}
+
+.card__change {
+    justify-self: end;
+    align-self: center;
+    font-weight: var(--fw-700);
+    font-size: 0.8rem;
+    color: var(--brigth-blue);
+}
+
+.card__change:hover {
+    text-decoration: none;
+    color: hsl(245, 83%, 68%);
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 0.7rem 0;
+    margin: 0.8rem 2rem 0 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.btn__primary {
+    background-color: var(--brigth-blue);
+    color: #fff;
+    font-weight: var(--fw-700);
+    box-shadow: 0 18px 30px -7px rgb(197, 189, 245);
+}
+
+.btn__primary:hover {
+    background-color: hsl(245, 83%, 68%);
+}
+
+.btn__default {
+    font-weight: var(--fw-900);
+    font-size: 0.9rem;
+    color: var(--desaturated-blue);
+}
+
+.btn__default:hover {
+    color: var(--dark-blue);
+}
+
+.attribution { 
+    position: absolute;
+    bottom: 0;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
